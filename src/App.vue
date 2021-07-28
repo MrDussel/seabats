@@ -8,6 +8,9 @@
     <div id="map">
       <router-view />
     </div>
+    <div id="timeline">
+      <timeline />
+    </div>
     <div id="aircrafts">
       <aircraft-list />
     </div>
@@ -27,11 +30,13 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { mapActions, mapGetters } from "vuex";
+import Timeline from "@/components/timeline/Timeline.vue";
 import AircraftList from "@/components/AircraftList.vue";
 import FlightList from "@/components/FlightList.vue";
 
 export default defineComponent({
   components: {
+    Timeline,
     AircraftList,
     FlightList,
   },
